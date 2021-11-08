@@ -1,9 +1,4 @@
 
-html {
-  margin: 0px;
-  padding: 0px;
-}
-
 body {
   margin: 0px;
   padding: 0px;
@@ -38,9 +33,9 @@ nav > *:last-child {
   margin-right: 10px;
 }
 
-/*** NAV @ 900px***/
+/*** NAV @ 700px***/
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 700px) {
   nav {
     font-size: .8rem;
   }
@@ -58,6 +53,8 @@ nav > *:last-child {
 /*** SECTION ***/
 .light_grey {
   background-color: hsl(240, 75%, 98%);
+  box-sizing: border-box;
+  padding-bottom: 3rem;
 }
 
 .desaturated_blue {
@@ -68,6 +65,7 @@ nav > *:last-child {
 }
 
 form {
+  box-sizing: border-box;
   width: 100%;
 }
 
@@ -113,12 +111,6 @@ input:invalid {
   border-color: red;
 }
 
-.illustration1, .illustration2 {
-  width: 75%;
-  height: 75%;
-  align-self: center;
-}
-
 h1 {
   font-family: 'Raleway', sans-serif;
   font-weight: 900;
@@ -137,11 +129,15 @@ section > div {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+}
+
+section > div {
+  box-sizing: border-box
 }
 
 section > div > * {
   padding-left: 3rem;
+  box-sizing: border-box
 }
 
 .curve {
@@ -154,7 +150,7 @@ section > div > * {
 }
 
 .quote {
-  width: 50%;
+  width: 60%;
   margin-top: 2rem;
   margin-left: 3rem;
   padding: 1.5rem 1.5rem;
@@ -171,13 +167,15 @@ section > div > * {
 }
 
 .inline {
+  margin-top: 40px;
   display: inline-block;
   position: relative;
-  bottom: 35px;
+  bottom: 40px;
 }
 
-.extrapadding {
-  padding-bottom: 10rem;
+.inline > * {
+  margin: 5px 5px;
+
 }
 
 .desaturated_blue > p {
@@ -185,36 +183,39 @@ section > div > * {
   padding-right: 4rem;
 }
 
-/*** SECTION @ 900px width ***/
+/*** SECTION @ 1100px width ***/
 
-@media screen and (max-width:900px) {
+@media screen and (max-width:1100px) {
   body {
     font-size: 1rem;
+  }
+
+  .illustration1, .illustration2 {
+    width: 75%;
+    align-self: center;
+  }
+
+
+  #secondInput {
+    margin:0px 0px 10px 0px;
+  }
+
+  .secondButton {
+    margin-left: 0px;
   }
 
   section {
     display: flex;
     flex-direction: column;
-    align-items: center;
   }
 
   section > div > * {
-  width: 100%;
   text-align: center;
-  padding: 0 1rem;
+  padding: 0 3rem;
   }
   
-  .item1 {
-    text-align: center;
-  }
-
-  .item1 h1 {
-    font-size: 1.6rem;
-  }
-
   .item2 {
-    orde
-    r: -1;
+    order: -1;
   }
   .item3 {
     order: 1;
@@ -222,38 +223,101 @@ section > div > * {
 
   .item5 {
     order: 2;
+    padding-bottom: 0rem;
   }
 
   .item4 {
     order: 3;
+    padding-bottom: 3rem;
   }
 
   .item4 h1 {
-    text-align: center;
-    font-size: 1.5rem;
+    margin-top: 100px;
+  }
+
+  .item4 p {
+    text-align: left;
   }
 
   .item6 {
     order: 4;
+    padding-bottom: .5rem;
   }
 
   .item7 {
     order: 5;
+    padding-top: 0px;
   }
 
-  #firstInput{
-    width: ;
+  .quote {  
+    text-align: left;
+  }
 
+  .desaturated_blue > p {
+    padding: 0rem 1rem;
+  }
+}
+
+/*** SECTION @ 600px width ***/
+
+@media screen and (max-width:600px) {
+
+  #firstInput {
+    width: 90%;
+  }
+
+  .firstButton{
+    display: block;
+    box-sizing: content-box;
+    margin: auto auto 100px auto;
+    width: 90%;
   }
 
   #secondInput{
-
+    width: 80%;
+    margin: 0px auto 10px auto;
   }
-  
 
+  .secondButton {
+    width: 80%;
+    box-sizing: content-box;
+    margin: 0px auto;
+  }
+
+  .item1 h1 {
+    font-size: 1.4rem;
+  }
+
+  .item4 h1 {
+    font-size: 1rem;
+  }
+
+  .quote {
+    width: 80%;
+    text-align: left;
+    margin: 2rem 2.5rem;
+    font-size: .7rem;
+  }
+
+  .circularSquare {
+    height: 50px;
+    width: 50px;
+  }
+
+  .inline {
+    font-size: .7rem;
+    margin-left: 5px;
+    bottom: 10px;
+  }
+
+  h3 {
+    margin-bottom: 0px;
+  }
+
+  .inline p {
+    margin-top: 5px;
+  }
 }
-
-
 
 /*** FOOTER ***/
 
@@ -321,12 +385,24 @@ footer > div {
   width: 22px;
 }
 
-/*** FOOTER @ width 900px ***/
+/*** FOOTER @ width 1300px ***/
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1300px) {
+  footer{
+    font-size: 1rem;
+  }
+  .footerdiv1 {
+    height: 38%;
+  }
+}
+
+/*** FOOTER @ width 1100px ***/
+
+@media screen and (max-width: 1100px) {
   footer{
     height: auto;
     flex-direction: column;
+    font-size: 1rem;
   }
 
   footer > div {
@@ -336,18 +412,23 @@ footer > div {
   .footerdiv1 {
     height: auto;
     margin-top: 4rem;
-    align-self: center;
+    padding-left: 2rem;
+    align-self: auto;
+  }
+
+  .footerdiv1 > *{
+    margin-left: 0px;
   }
 
   .footerdiv2 {
     height: auto;
-    margin-left: 3rem;
-    display: flex;
     justify-content: flex-start;
+    margin-top: 2rem;
+    padding-left: 2rem;
   }
 
   .footerdiv3 {
-    margin-left: 3rem;
+    padding-left: 2rem;
   }
 
   .footerdiv4 {
