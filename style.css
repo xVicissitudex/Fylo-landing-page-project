@@ -334,6 +334,11 @@ ul {
   padding: 0px;
 }
 
+li > a {
+  color: inherit;
+  text-decoration: none;
+}
+
 footer > div {
   width: 25%;
 }
